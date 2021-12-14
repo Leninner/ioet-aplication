@@ -1,0 +1,20 @@
+{
+  "name": "ioet-aplication",
+  "version": "1.0.0",
+  "description": "Esta es la aplicación a posición de Frontend Junior en IOET",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "frontend",
+    "ioet",
+    "junior"
+  ],
+  "author": "@leninner",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.5",
+    "jest": "^27.4.5"
+  }
+}

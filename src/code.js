@@ -27,6 +27,11 @@
 // OUTPUT:
 // RENE-ASTRID: 3
 
-export const code = () => {
-  return;
-};
+// leer el archivo y guardarlo en una variable
+// crear una funcion que reciba el archivo y lo convierta en un array
+
+const fs = require('fs');
+
+fs.readFile('setsOfData.txt', 'utf-8', (err, data) => {
+  console.log(data.split('|'));
+});

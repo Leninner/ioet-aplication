@@ -27,11 +27,27 @@
 // OUTPUT:
 // RENE-ASTRID: 3
 
-// leer el archivo y guardarlo en una variable
-// crear una funcion que reciba el archivo y lo convierta en un array
-
 const fs = require('fs');
 
-fs.readFile('setsOfData.txt', 'utf-8', (err, data) => {
-  console.log(data.split('|'));
-});
+const PATH = 'C:\\Users\\USUARIO\\Desktop\\ioet-aplication\\src\\setsOfData.txt';
+
+const arrayOfData = fs.readFileSync(PATH, 'utf8').split('|');
+
+const getArray = () => {
+  let obj = {};
+
+  arrayOfData.forEach((value) => {
+    const name = value.split('=')[0];
+    const schedule = value.split('=')[1];
+
+    if (!obj[name]) {
+      obj[name] = schedule.split(',');
+    }
+  });
+
+  // NOTE: Se puede utilizar destructuración de arreglos
+
+  return obj;
+};
+
+console.log(getArray());

@@ -1,4 +1,4 @@
-import { employeesInOffice } from './code.js';
+import { employeesInOffice } from './employeesInOffice.js';
 
 const fs = require('fs');
 const PATH = 'C:\\Users\\USUARIO\\Desktop\\ioet-aplication\\src\\setsOfData.txt';

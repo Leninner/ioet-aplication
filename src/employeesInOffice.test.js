@@ -1,7 +1,7 @@
 import { employeesInOffice } from './employeesInOffice.js';
 
 const fs = require('fs');
-const PATH = 'C:\\Users\\USUARIO\\Desktop\\ioet-aplication\\src\\setsOfData.txt';
+const PATH = 'C:\\Users\\USUARIO\\Desktop\\ioet-aplication\\src\\data\\setsOfData.txt';
 const arrayOfData = fs.readFileSync(PATH, 'utf8').split('\n');
 
 describe('Función para comprobar si dos personas se encuentran en la oficina simultáneamente', () => {

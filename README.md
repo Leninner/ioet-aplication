@@ -1,1 +1,1 @@
-# Solution
+# Synthesis of the solution

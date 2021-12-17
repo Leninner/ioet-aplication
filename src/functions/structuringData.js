@@ -66,7 +66,7 @@ export const getObjStructured = (obj, value) => {
   return obj;
 };
 
-export const dome = (obj) => {
+export const getFinalResult = (obj) => {
   const structuredData = getPairs(Object.entries(obj));
   getStructuredData(structuredData);
 

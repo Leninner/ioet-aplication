@@ -1,4 +1,4 @@
-export const getPairs = (array) => {
+const getPairs = (array) => {
   let obj = {};
 
   for (let i = 0; i < array.length; i++) {
@@ -14,7 +14,7 @@ export const getPairs = (array) => {
 };
 
 //crear la lógica para mostrar en la consola los resultados
-export const getUniqueDays = (arrayOne, arrayTwo) => {
+const getUniqueDays = (arrayOne, arrayTwo) => {
   let arrayGeneral = [...arrayOne, ...arrayTwo];
   let objeto = {};
 
@@ -32,38 +32,10 @@ export const getUniqueDays = (arrayOne, arrayTwo) => {
   });
 };
 
-export const separateHours = (obj) => {
-  return Object.entries(obj).map(([key, value]) => {
-    obj[key] = value.map((value) => value.split('-'));
-  });
-};
-
-export const getStructuredData = (structuredData) => {
+const getStructuredData = (structuredData) => {
   return Object.entries(structuredData).forEach(([key, value]) => {
     structuredData[key] = getUniqueDays(value[0], value[1]);
   });
-};
-
-export const getDataWithOnlyHours = (obj) => {
-  return Object.entries(obj).map(([key, value]) => {
-    obj[key] = value.map((value) => value.map((value) => value.split(':')[0]).join('-'));
-  });
-};
-
-export const getObjStructured = (obj, value) => {
-  value.split('|').forEach((value) => {
-    const name = value.split('=')[0];
-    const schedule = value.split('=')[1];
-
-    if (!obj[name]) {
-      obj[name] = schedule.split(',');
-    }
-  });
-
-  separateHours(obj);
-  getDataWithOnlyHours(obj);
-
-  return obj;
 };
 
 export const getFinalResult = (obj) => {

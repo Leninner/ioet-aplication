@@ -36,7 +36,7 @@ describe('Function to comprobate if two employees are in the office simultaneous
     });
   });
 
-  test('Si solo tengo un par de personas y no tengo ninguna coincidencia, entonces el resultado debe ser 0', () => {
+  test('If I Have only one pair of persons and any coincidences, then the results should be 0', () => {
     expect(employeesInOffice(arrayOfData[4])).toStrictEqual({
       'PAUL-ANA': 0,
     });

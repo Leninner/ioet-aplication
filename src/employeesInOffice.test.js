@@ -4,8 +4,8 @@ const fs = require('fs');
 const PATH = 'C:\\Users\\USUARIO\\Desktop\\ioet-aplication\\src\\data\\setsOfData.txt';
 const arrayOfData = fs.readFileSync(PATH, 'utf8').split('\n');
 
-describe('Función para comprobar si dos personas se encuentran en la oficina simultáneamente', () => {
-  test('Debe funcionar con el input de prueba uno', () => {
+describe('Function to comprobate if two employees are in the office simultaneously', () => {
+  test('It should work with the input shows one', () => {
     expect(employeesInOffice(arrayOfData[0])).toStrictEqual({
       'ASTRID-ANDRES': 3,
       'RENE-ANDRES': 2,
@@ -13,13 +13,13 @@ describe('Función para comprobar si dos personas se encuentran en la oficina si
     });
   });
 
-  test('Debe funcionar con el input de prueba dos', () => {
+  test('It should work with the input shows two', () => {
     expect(employeesInOffice(arrayOfData[1])).toStrictEqual({
       'RENE-ASTRID': 3,
     });
   });
 
-  test('La pareja de empleados no debe repetirse y además los resultados deben ser los correctos', () => {
+  test('The pairs of employees cannot be repeated and also the results must be as expected.', () => {
     expect(employeesInOffice(arrayOfData[2])).toStrictEqual({
       'ASTRID-CARLOS': 3,
       'ASTRID-PEPE': 2,
@@ -30,19 +30,19 @@ describe('Función para comprobar si dos personas se encuentran en la oficina si
     });
   });
 
-  test('Debe funcionar con todos los casos', () => {
+  test('Must be work with all cases', () => {
     expect(employeesInOffice(arrayOfData[3])).toStrictEqual({
       'RENE-ASTRID': 3,
     });
   });
 
-  test('Debe funcionar en casos que las personas no tengan ningúna hora de coincidencia', () => {
+  test('Si solo tengo un par de personas y no tengo ninguna coincidencia, entonces el resultado debe ser 0', () => {
     expect(employeesInOffice(arrayOfData[4])).toStrictEqual({
       'PAUL-ANA': 0,
     });
   });
 
-  test('Si ingresamos la data de un solo empleado, entonces retornamos un objeto vacío', () => {
+  test('If I have the data of only one person, then return an empty object', () => {
     expect(employeesInOffice(arrayOfData[5])).toStrictEqual({});
   });
 });

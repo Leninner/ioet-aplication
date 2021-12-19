@@ -10,7 +10,7 @@ const separateHours = (obj) => {
   });
 };
 
-export const getObjStructured = (obj, value) => {
+export const getStructuredObject = (obj, value) => {
   value.split('|').forEach((value) => {
     const name = value.split('=')[0];
     const schedule = value.split('=')[1];

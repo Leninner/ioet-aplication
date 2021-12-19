@@ -1,6 +1,6 @@
 # Synthesis of the solution
 
-<img src="./images/mentalMap.png">
+<img src="./images/mental.png">
 
 ## Tests Result
 

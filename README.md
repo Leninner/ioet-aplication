@@ -2,7 +2,7 @@
 
 I did my best. I really hope my solution is according to a Frontend Junior position
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=leninner)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=ioet-aplication)
 
 - [To run the tests in your local machine](#to-run-the-tests-in-your-local-machine)
 - [Synthesis of the solution](#synthesis-of-the-solution)

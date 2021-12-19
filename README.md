@@ -1,4 +1,4 @@
-**INDEX**
+**INDEX:**
 
 I did my best. I really hope my solution is according to a Frontend Junior position
 

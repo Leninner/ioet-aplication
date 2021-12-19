@@ -2,12 +2,21 @@
 
 I did my best. I really hope my solution is according to a Frontend Junior position
 
+- [To run the tests in your local machine](#to-run-the-tests-in-your-local-machine)
 - [Synthesis of the solution](#synthesis-of-the-solution)
   - [Flow chart of the **Employees in Office** function](#flow-chart-of-the-employees-in-office-function)
   - [Tech Stack for this solution](#tech-stack-for-this-solution)
 - [Step By Step to solve the challenge](#step-by-step-to-solve-the-challenge)
   - [Test Results](#test-results)
 - [Conclusions and Recommendations](#conclusions-and-recommendations)
+
+# To run the tests in your local machine
+
+1. Clone the repo in your computer:
+
+```bash
+git clone https://github.com/Leninner/ioet-aplication.git
+```
 
 # Synthesis of the solution
 

@@ -49,6 +49,7 @@ export const getFinalResult = (obj) => {
       let peopleOneSalida = parseInt(value[1][1].slice(3));
       let peopleTwoEntrada = Math.max(parseInt(value[1][0].slice(0, 2)), parseInt(value[1][1].slice(0, 2)));
       let peopleTwoSalida = parseInt(value[1][0].slice(3));
+
       if (peopleOneEntrada === peopleTwoEntrada || peopleOneSalida === peopleTwoSalida) {
         cont++;
       } else if (peopleOneSalida < peopleTwoEntrada) {

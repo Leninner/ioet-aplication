@@ -4,7 +4,7 @@
 
 ## Tests Result
 
-<img src="./images/tests.png">
+<img src="./images/test.png">
 
 ## For run the tests cases
 

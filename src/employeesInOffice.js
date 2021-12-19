@@ -1,5 +1,5 @@
-import { getFinalResult } from './functions/structuringData';
-import { getObjStructured } from './functions/obtainingFinalResult';
+import { getFinalResult } from './functions/obtainingFinalResult.js';
+import { getObjStructured } from './functions/structuringData.js';
 
 export const employeesInOffice = (value) => {
   let obj = {};

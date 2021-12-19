@@ -1,10 +1,13 @@
 **INDEX**
 
+I did my best. I really hope my solution is according to a Frontend Junior position
+
 - [Synthesis of the solution](#synthesis-of-the-solution)
   - [Flow chart of the **Employees in Office** function](#flow-chart-of-the-employees-in-office-function)
+  - [Tech Stack for this solution](#tech-stack-for-this-solution)
 - [Step By Step to solve the challenge](#step-by-step-to-solve-the-challenge)
   - [Test Results](#test-results)
-- [About me](#about-me)
+- [Conclusions and Recommendations](#conclusions-and-recommendations)
 
 # Synthesis of the solution
 
@@ -21,11 +24,18 @@ The goal of this challenge was to output the info containing pairs of employees 
 To solve this challenge I used Javascript, which is a multi-paradigm language and many paradigms that I used was:
 
 - Imperative Paradigm: We tell the computer what I want step by step
+- I divided the functions into modules for a better understanding of the problem
+- I tried to use good practices like SOLID principles
 - To do Test Driven Development I used Jest
 
 ## Flow chart of the **Employees in Office** function
 
 <img src="./images/mental.png">
+
+## Tech Stack for this solution
+
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/Spotify-1ED760?&style=for-the-badge&logo=spotify&logoColor=white">
 
 # Step By Step to solve the challenge
 
@@ -66,8 +76,34 @@ getObjStructured(obj, data);
 getFinalResult(obj): // { 'RENE-ASTRID': 2, 'RENE-ANDRES': 2, 'ASTRID-ANDRES': 3 }
 ```
 
+This two functions:
+
+```js
+getObjStructured(obj, value);
+getFinalResult(obj);
+```
+
+Are use by the **Employees in Office** function for get the final Result
+
+- Litle Synthesis:
+
+1. Structure data
+2. Getting final result
+
+<img src="./images/employees.png">
+
 ## Test Results
 
 <img src="./images/test.png">
 
-# About me
+# Conclusions and Recommendations
+
+This challenge was very useful for me. Was useful because I could improve my logical thinking and feel challenged to do the best I could, even though the exercise was complex for me.
+
+After this problem, I am left with a huge desire to continue improving my development skills.
+
+As recommendation:
+
+- Specify which are the data type of the inputs and the outputs of the challenge.
+
+<img src="http://ForTheBadge.com/images/badges/built-with-love.svg">

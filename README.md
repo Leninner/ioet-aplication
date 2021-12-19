@@ -18,6 +18,74 @@ I did my best. I really hope my solution is according to a Frontend Junior posit
 git clone https://github.com/Leninner/ioet-aplication.git
 ```
 
+2. Install all the dependencies with:
+
+> To do this step, you need to have **NodeJs** in the last version: 16.13.1
+
+```bash
+npm install
+```
+
+3. In the path `./src/employeesInOffice.test.js`, you will see:
+
+```js
+const PATH = 'C:\\Users\\USUARIO\\Desktop\\ioet-aplication\\src\\data\\setsOfData.txt';
+```
+
+- You need to change the PATH const according the path of the `setsOfData.txt` file in your machine, then type in the terminal:
+
+```bash
+npm run test
+```
+
+If the last not run and you get an error, then comment the lines 3 to 5 and pause de first `describe` in the line seven and unpause the second describe in the line 50:
+
+- The 3 lines for comment
+
+```js
+const fs = require('fs');
+const PATH = 'C:\\Users\\USUARIO\\Desktop\\ioet-aplication\\src\\data\\setsOfData.txt';
+const arrayOfData = fs.readFileSync(PATH, 'utf8').split('\n');
+```
+
+- **Pause** the first describe in the line 7:
+
+```js
+// From this
+
+describe('some word', () => {
+  /*some tests*/
+});
+
+// To this
+
+xdescribe('some word', () => {
+  /*some tests*/
+});
+```
+
+- **Unpause** the second describe in the line 50:
+
+```js
+// From this
+
+xdescribe('some word', () => {
+  /*some tests*/
+});
+
+// To this
+
+describe('some word', () => {
+  /*some tests*/
+});
+```
+
+Then type in the terminal and see the results:
+
+<img src="./images/testDos.png">
+
+> If any of this solutions run, please let me know in whatsapp: https://wa.link/qx30wf
+
 # Synthesis of the solution
 
 The goal of this challenge was to output the info containing pairs of employees and how often they have coincided in the office:

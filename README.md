@@ -2,6 +2,8 @@
 
 I did my best. I really hope my solution is according to a Frontend Junior position
 
+![visitors](https://visitor-badge.glitch.me/badge?page_id=leninner)
+
 - [To run the tests in your local machine](#to-run-the-tests-in-your-local-machine)
 - [Synthesis of the solution](#synthesis-of-the-solution)
   - [Flow chart of the **Employees in Office** function](#flow-chart-of-the-employees-in-office-function)

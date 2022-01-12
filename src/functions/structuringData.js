@@ -20,8 +20,15 @@ export const getStructuredObject = (obj, value) => {
     }
   });
 
+  // 02
+
   separateHours(obj);
+
+  // 03
+
   getDataWithOnlyHours(obj);
+
+  // 04
 
   return obj;
 };

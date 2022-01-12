@@ -98,7 +98,7 @@ describe('Function to comprobate if two employees are in the office simultaneous
   test('Should work with all tests', () => {
     expect(
       employeesInOffice(
-        'PAUL=MO15:15-20:00,TU10:00-12:00,TH05:00-09:15,SA14:00-18:00,SU21:10-22:00|ANA=MO09:00-12:00,TH11:00-14:00,SU20:00-20:00'
+        'PAUL=MO15:15-20:00,TU10:00-12:00,TH05:00-09:15,SA14:00-18:00,SU21:10-22:00|ANA=MO09:00-12:00,TH11:00-14:00,SU20:00-20:30'
       )
     ).toStrictEqual({
       'PAUL-ANA': 0,

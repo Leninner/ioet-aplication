@@ -40,34 +40,35 @@ const getStructuredData = (structuredData) => {
 
 export const getFinalResult = (obj) => {
   const structuredData = getPairs(Object.entries(obj));
+  // 05
   getStructuredData(structuredData);
-
+  // 06
   Object.entries(structuredData).map(([key, value]) => {
     let cont = 0;
 
     value.forEach((value) => {
       const [dayOne, dayTwo] = value;
       const [timeOne, timeTwo] = dayTwo;
-      console.log(timeOne, timeTwo);
       const [hourStartOne, hourEndOne] = timeOne.split('-');
       const [hourStartTwo, hourEndTwo] = timeTwo.split('-');
 
       if (
-        hourStartOne === hourStartTwo ||
-        hourEndOne === hourEndTwo ||
-        hourStartOne === hourEndTwo ||
-        hourStartTwo === hourEndOne
+        parseInt(hourStartOne) === parseInt(hourStartTwo) ||
+        parseInt(hourEndOne) === parseInt(hourEndTwo) ||
+        parseInt(hourStartOne) === parseInt(hourEndTwo) ||
+        parseInt(hourStartTwo) === parseInt(hourEndOne)
       ) {
         cont++;
-      } else if (hourEndOne < hourStartTwo || hourStartOne > hourEndTwo) {
+      } else if (parseInt(hourEndOne) < parseInt(hourStartTwo) || parseInt(hourStartOne) > parseInt(hourEndTwo)) {
         return;
-      } else if (hourStartOne < hourEndTwo && hourEndOne > hourStartTwo) {
+      } else if (parseInt(hourStartOne) < parseInt(hourEndTwo) && parseInt(hourEndOne) > parseInt(hourStartTwo)) {
         cont++;
       }
     });
 
     structuredData[key] = cont;
   });
+  // 07
 
   return structuredData;
 };

@@ -88,14 +88,14 @@ describe('Function to comprobate if two employees are in the office simultaneous
   test('Must be work with all cases', () => {
     expect(
       employeesInOffice(
-        'RENE=MO10:15-12:00,TU10:00-12:00,TH09:00-13:15,SA14:00-18:00,SU20:00-21:00|ASTRID=MO09:00-12:00,TH11:00-14:00,SU20:00-21:00'
+        'RENE=MO7:15-8:00,TU10:00-12:00,TH09:00-13:15,SA14:00-18:00,SU14:00-15:00|ASTRID=MO09:00-11:00,TH11:00-14:00,SU20:00-21:00'
       )
     ).toStrictEqual({
-      'RENE-ASTRID': 3,
+      'RENE-ASTRID': 1,
     });
   });
 
-  test('If I Have only one pair of persons and any coincidences, then the results should be 0', () => {
+  test('Should work with all tests', () => {
     expect(
       employeesInOffice(
         'PAUL=MO15:15-20:00,TU10:00-12:00,TH05:00-09:15,SA14:00-18:00,SU21:10-22:00|ANA=MO09:00-12:00,TH11:00-14:00,SU20:00-20:00'

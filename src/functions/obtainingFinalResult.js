@@ -44,20 +44,28 @@ export const getFinalResult = (obj) => {
 
   Object.entries(structuredData).map(([key, value]) => {
     let cont = 0;
-    value.forEach((value) => {
-      let peopleOneEntrada = Math.min(parseInt(value[1][0].slice(0, 2)), parseInt(value[1][1].slice(0, 2)));
-      let peopleOneSalida = parseInt(value[1][1].slice(3));
-      let peopleTwoEntrada = Math.max(parseInt(value[1][0].slice(0, 2)), parseInt(value[1][1].slice(0, 2)));
-      let peopleTwoSalida = parseInt(value[1][0].slice(3));
 
-      if (peopleOneEntrada === peopleTwoEntrada || peopleOneSalida === peopleTwoSalida) {
+    value.forEach((value) => {
+      const [dayOne, dayTwo] = value;
+      const [timeOne, timeTwo] = dayTwo;
+      console.log(timeOne, timeTwo);
+      const [hourStartOne, hourEndOne] = timeOne.split('-');
+      const [hourStartTwo, hourEndTwo] = timeTwo.split('-');
+
+      if (
+        hourStartOne === hourStartTwo ||
+        hourEndOne === hourEndTwo ||
+        hourStartOne === hourEndTwo ||
+        hourStartTwo === hourEndOne
+      ) {
         cont++;
-      } else if (peopleOneSalida < peopleTwoEntrada) {
+      } else if (hourEndOne < hourStartTwo || hourStartOne > hourEndTwo) {
         return;
-      } else if (peopleOneSalida > 12 || peopleTwoSalida > 12) {
-        if (peopleTwoEntrada - peopleOneEntrada + 12 <= peopleOneSalida) cont++;
+      } else if (hourStartOne < hourEndTwo && hourEndOne > hourStartTwo) {
+        cont++;
       }
     });
+
     structuredData[key] = cont;
   });
 

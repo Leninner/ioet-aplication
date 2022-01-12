@@ -27,6 +27,8 @@ const getUniqueDays = (arrayOne, arrayTwo) => {
     }
   });
 
+  // getUniqueDays
+
   return Object.entries(objeto).filter(([key, value]) => {
     return value.length === 2;
   });
@@ -35,6 +37,7 @@ const getUniqueDays = (arrayOne, arrayTwo) => {
 const getStructuredData = (structuredData) => {
   return Object.entries(structuredData).forEach(([key, value]) => {
     structuredData[key] = getUniqueDays(value[0], value[1]);
+    // getUniqueDays2
   });
 };
 
@@ -47,8 +50,9 @@ export const getFinalResult = (obj) => {
     let cont = 0;
 
     value.forEach((value) => {
-      const [dayOne, dayTwo] = value;
-      const [timeOne, timeTwo] = dayTwo;
+      const [day, schedule] = value;
+      // day  schedule
+      const [timeOne, timeTwo] = schedule;
       const [hourStartOne, hourEndOne] = timeOne.split('-');
       const [hourStartTwo, hourEndTwo] = timeTwo.split('-');
 
